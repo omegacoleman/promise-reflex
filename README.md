@@ -8,13 +8,13 @@ A helper for event binding with promise.
 ## Usage
 
 ```javascript
-require("promise-reflex");
+require("./index.js");
 
 var til_onesec = () =>
 	new Promise((resolve, reject) => setTimeout(resolve, 1000));
 var say_heyeayea = () => console.log("heyeayea");
 
-var end = Promise.reflex(a, b);
+var end = Promise.reflex(til_onesec, say_heyeayea);
 setTimeout(end, 3500);
 ```
 
